@@ -1,41 +1,208 @@
-# プライバシーポリシー
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー - MemoStream</title>
+  <style>
+    /* 基本リセット & 背景設定 */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f2faf9; /* ほんのりアクアがかった清潔感のある背景色 */
+      color: #334155;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
 
-「MemoStream」（以下、「本アプリ」）における利用者情報の取扱いについて説明します。
+    /* ヘッダーセクション（アクアマリン・グラデーション） */
+    .header {
+      background: linear-gradient(135deg, #0e5a6f 0%, #0891b2 50%, #14b8a6 100%);
+      color: #ffffff;
+      padding: 48px 24px 72px;
+      text-align: left;
+    }
+    .header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .app-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #99f6e4; /* 明るいアクアマリン色 */
+      margin-bottom: 12px;
+    }
+    .header-title {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    .header-desc {
+      font-size: 14px;
+      color: #ccfbf1;
+      line-height: 1.6;
+    }
 
-## 1. 取得する情報
-本アプリは、クラウド同期を備えたチャット型メモ機能の提供のため、利用者が許可または入力した以下の情報を取得・利用します。
+    /* メインコンテンツ（カード群） */
+    .container {
+      max-width: 760px;
+      margin: -40px auto 40px;
+      padding: 0 16px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #d1fae5;
+      box-shadow: 0 4px 6px -1px rgba(8, 145, 178, 0.05), 0 2px 4px -1px rgba(8, 145, 178, 0.03);
+      padding: 24px 28px;
+      margin-bottom: 20px;
+    }
+    .card-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #0f766e; /* 落ち着いたアクアマリン・ティール */
+      margin-bottom: 12px;
+    }
+    .card-content {
+      font-size: 14.5px;
+      color: #475569;
+    }
+    .card-content ul {
+      margin: 10px 0 10px 20px;
+    }
+    .card-content li {
+      margin-bottom: 6px;
+    }
+    .card-content strong {
+      color: #0f172a;
+    }
 
-*   **アカウント情報**: メールアドレス、表示名、プロフィール画像URL（サインイン機能を利用した場合）
-*   **メモデータ**: 利用者が作成したチャットルーム情報、テキスト、添付画像・ファイルのURL、リンク等のデータ
-*   **アプリ内の設定情報**: 言語設定、テーマ設定、タグの表示状態など
+    /* お問い合わせ・メタ情報 */
+    .contact-link {
+      color: #0d9488;
+      text-decoration: underline;
+      word-break: break-all;
+    }
+    .meta-box {
+      margin-top: 18px;
+      background-color: #f0fdfa;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 13.5px;
+      color: #475569;
+      line-height: 1.8;
+      border: 1px solid #ccfbf1;
+    }
 
-これらの情報は、本アプリでメモを安全に記録・管理・同期する目的にのみ利用します。
+    /* フッター */
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: #94a3b8;
+      padding-bottom: 48px;
+    }
+  </style>
+</head>
+<body>
 
-## 2. 情報の送信・第三者提供
-本アプリは、マルチデバイスでのデータ同期およびバックアップ機能を提供するため、Googleが提供するFirebase（Firestore, Firebase Authentication等）を利用し、データを安全に送信・保存します。個人を特定する情報を含め、利用者情報を第三者に販売、共有または提供することはありません。
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="app-brand">
+        <span>🌊 MemoStream</span>
+      </div>
+      <h1 class="header-title">プライバシーポリシー</h1>
+      <p class="header-desc">「MemoStream」（以下、「本アプリ」）における利用者情報の取扱いについて説明します。</p>
+    </div>
+  </header>
 
-## 3. 広告・アクセス解析について
-本アプリは、行動ターゲティング広告を配信するための広告SDK、および利用者を識別するアクセス解析SDKを使用しません。
+  <!-- 本文カードエリア -->
+  <main class="container">
 
-## 4. 端末の機能へのアクセスについて
-本アプリは、画像やファイルの添付機能においてOS標準のファイル選択機能を利用します。アプリが端末のストレージ全体へのアクセス権限を不必要に要求・取得することはありません。
+    <section class="card">
+      <h2 class="card-title">1. 取得する情報</h2>
+      <div class="card-content">
+        <p>本アプリは、クラウド同期を備えたチャット型メモ機能の提供のため、利用者が許可または入力した以下の情報を取得・利用します。</p>
+        <ul>
+          <li><strong>アカウント情報</strong>: メールアドレス、表示名、プロフィール画像URL（サインイン機能を利用した場合）</li>
+          <li><strong>メモデータ</strong>: 利用者が作成したチャットルーム情報、テキスト、添付画像・ファイルのURL、リンク等のデータ</li>
+          <li><strong>アプリ内の設定情報</strong>: 言語設定、テーマ設定、タグの表示状態など</li>
+        </ul>
+        <p>これらの情報は、本アプリでメモを安全に記録・管理・同期する目的にのみ利用します。</p>
+      </div>
+    </section>
 
-## 5. 情報の管理・削除
-アプリ内のデータは、クラウド上および利用者の端末内で管理されます。
-利用者はアプリ内の設定画面より、自身のアカウント情報および紐づくすべてのクラウドデータ・ローカルデータを完全に削除することができます。本アプリをアンインストールしただけではクラウド上のデータは自動的に削除されませんので、完全な削除を希望する場合はアプリ内から削除操作を行ってください。
+    <section class="card">
+      <h2 class="card-title">2. 情報の送信・第三者提供</h2>
+      <div class="card-content">
+        <p>本アプリは、マルチデバイスでのデータ同期およびバックアップ機能を提供するため、Googleが提供するFirebase（Firestore, Firebase Authentication等）を利用し、データを安全に送信・保存します。個人を特定する情報を含め、利用者情報を第三者に販売、共有または提供することはありません。</p>
+      </div>
+    </section>
 
-## 6. お子さまの利用について
-本アプリは、未成年の方による利用を意図して個人情報を収集するものではありません。
+    <section class="card">
+      <h2 class="card-title">3. 広告・アクセス解析について</h2>
+      <div class="card-content">
+        <p>本アプリは、行動ターゲティング広告を配信するための広告SDK、および利用者を識別するアクセス解析SDKを使用しません。</p>
+      </div>
+    </section>
 
-## 7. 本ポリシーの変更
-法令の変更または本アプリの機能変更等に伴い、本ポリシーを変更することがあります。重要な変更を行う場合は、本アプリ内または本ページにてお知らせします。
+    <section class="card">
+      <h2 class="card-title">4. 端末の機能へのアクセスについて</h2>
+      <div class="card-content">
+        <p>本アプリは、画像やファイルの添付機能においてOS標準のファイル選択機能を利用します。アプリが端末のストレージ全体へのアクセス権限を不必要に要求・取得することはありません。</p>
+      </div>
+    </section>
 
-## 8. お問い合わせ
-本ポリシーおよび利用者情報の取扱いに関するお問い合わせは、以下の連絡先までお願いいたします。
+    <section class="card">
+      <h2 class="card-title">5. 情報の管理・削除</h2>
+      <div class="card-content">
+        <p>本アプリ内のデータは、クラウド上および利用者の端末内で管理されます。</p>
+        <p>利用者はアプリ内の設定画面より、自身のアカウント情報および紐づくすべてのクラウドデータ・ローカルデータを完全に削除することができます。本アプリをアンインストールしただけではクラウド上のデータは自動的に削除されませんので、完全な削除を希望する場合はアプリ内から削除操作を行ってください。</p>
+      </div>
+    </section>
 
-[appbee1010@gmail.com]
+    <section class="card">
+      <h2 class="card-title">6. お子さまの利用について</h2>
+      <div class="card-content">
+        <p>本アプリは、未成年の方による利用を意図して個人情報を収集するものではありません。</p>
+      </div>
+    </section>
 
-**アプリ名**: MemoStream
-**制定日**: 2026年9月
+    <section class="card">
+      <h2 class="card-title">7. 本ポリシーの変更</h2>
+      <div class="card-content">
+        <p>法令の変更または本アプリの機能変更等に伴い、本ポリシーを変更することがあります。重要な変更を行う場合は、本アプリまたは本ページにてお知らせします。</p>
+      </div>
+    </section>
 
-&copy; 2026 
+    <section class="card">
+      <h2 class="card-title">8. お問い合わせ</h2>
+      <div class="card-content">
+        <p>本ポリシーおよび利用者情報の取扱いに関するお問い合わせは、以下の連絡先までお願いいたします。</p>
+        <p style="margin-top: 8px;">
+          <a class="contact-link" href="mailto:appbee1010@gmail.com">appbee1010@gmail.com</a>
+        </p>
+
+        <div class="meta-box">
+          <div><strong>アプリ名：</strong>MemoStream</div>
+          <div><strong>制定日：</strong>2026年9月</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    &copy; 2026 MemoStream
+  </footer>
+
+</body>
+</html>
